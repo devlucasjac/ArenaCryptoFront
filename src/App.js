@@ -14,7 +14,7 @@ function App() {
       <Container customClass="min-height">
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="posts/:id" element={<Post />} />
+          <Route path="/posts/:id" element={<Post />} />
         </Routes>
       </Container>
       <Footer></Footer>
