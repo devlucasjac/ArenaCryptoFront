@@ -24,11 +24,15 @@ function Post() {
 
   return (
     <Container>
-      <h1>{post.titulo}</h1>
-      <h4>{post.categoria}</h4>
-      <h3>{post.resumo}</h3>
-      <img src={post.imagem} alt={post.titulo} />
-      <p>{post.texto}</p>
+      {post && (
+        <>
+          <h1>{post.titulo}</h1>
+          <h4>{post.categoria}</h4>
+          <h3>{post.resumo}</h3>
+          <img src={post.imagem} alt={post.titulo} />
+          <p>{post.texto}</p>
+        </>
+      )}
     </Container>
   );
 }
