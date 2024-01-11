@@ -1,5 +1,36 @@
+import styles from "./Post.module.css";
+
+import Container from "../layout/Container";
+
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+
 function Post() {
-  return <div>Post</div>;
+  const { id } = useParams();
+
+  const [post, setPost] = useState();
+
+  useEffect(() => {
+    fetch(`http://127.0.0.1:8000/api/v1/post/${id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((resp) => resp.json())
+      .then((data) => setPost(data))
+      .catch((err) => console.log(err));
+  }, []);
+
+  return (
+    <Container>
+      <h1>{post.titulo}</h1>
+      <h4>{post.categoria}</h4>
+      <h3>{post.resumo}</h3>
+      <img src={post.imagem} alt={post.titulo} />
+      <p>{post.texto}</p>
+    </Container>
+  );
 }
 
 export default Post;

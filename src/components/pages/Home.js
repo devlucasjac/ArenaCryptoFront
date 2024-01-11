@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import Container from "../layout/Container";
 import PostCard from "../layout/PostCard";
 
-function Home() {
+function Home({ url }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/v1/post/", {
+    fetch(`${url}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

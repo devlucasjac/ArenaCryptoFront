@@ -13,7 +13,11 @@ function App() {
       <NavBar></NavBar>
       <Container customClass="min-height">
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route
+            exact
+            path="/"
+            element={<Home url="http://127.0.0.1:8000/api/v1/post/" />}
+          />
           <Route path="/posts/:id" element={<Post />} />
         </Routes>
       </Container>
