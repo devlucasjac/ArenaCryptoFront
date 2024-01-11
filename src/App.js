@@ -19,6 +19,10 @@ function App() {
             element={<Home url="http://127.0.0.1:8000/api/v1/post/" />}
           />
           <Route path="/posts/:id" element={<Post />} />
+          <Route
+            path="/category/:id"
+            element={<Home url="http://127.0.0.1:8000/api/v1/post/" />}
+          />
         </Routes>
       </Container>
       <Footer></Footer>
