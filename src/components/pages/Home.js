@@ -21,23 +21,16 @@ function Home({ url }) {
       .catch((err) => console.log(err));
   }, []);
 
-  function click() {
-    console.log("clicou");
-  }
-
   return (
-    <Container>
-      <div>
-        {posts.map((post) => (
-          <PostCard
-            id={post.id}
-            titulo={post.titulo}
-            resumo={post.resumo}
-            imagem={post.imagem}
-            handleClick={click}
-          ></PostCard>
-        ))}
-      </div>
+    <Container customClass="center">
+      {posts.map((post) => (
+        <PostCard
+          id={post.id}
+          titulo={post.titulo}
+          resumo={post.resumo}
+          imagem={post.imagem}
+        ></PostCard>
+      ))}
     </Container>
   );
 }

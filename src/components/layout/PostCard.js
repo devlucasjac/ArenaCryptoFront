@@ -1,14 +1,35 @@
-import { Link } from "react-router-dom";
-
 import styles from "./PostCard.module.css";
 
-function PostCard({ titulo, resumo, imagem, id, handleClick }) {
+import { useNavigate } from "react-router";
+
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
+
+function PostCard({ titulo, resumo, imagem, id }) {
+  const navigate = useNavigate();
+
+  function sendToPage() {
+    navigate(`/posts/${id}`);
+  }
+
   return (
-    <Link to={`/posts/${id}`}>
-      <img src={imagem} alt={titulo} />
-      <h3>{titulo}</h3>
-      <span>{resumo}</span>
-    </Link>
+    <Card className={styles.card_container}>
+      <CardActionArea onClick={sendToPage}>
+        <CardMedia component="img" height="100" src={imagem} alt={titulo} />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {titulo}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {resumo}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
 }
 
