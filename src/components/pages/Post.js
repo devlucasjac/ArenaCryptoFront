@@ -18,20 +18,29 @@ function Post() {
       },
     })
       .then((resp) => resp.json())
-      .then((data) => setPost(data))
+      .then((data) => {
+        setPost(data);
+        console.log(data);
+      })
       .catch((err) => console.log(err));
   }, []);
 
   return (
-    <Container>
+    <Container customClass="start">
       {post && (
-        <>
+        <div>
           <h1>{post.titulo}</h1>
-          <h4>{post.categoria}</h4>
-          <h3>{post.resumo}</h3>
-          <img src={post.imagem} alt={post.titulo} />
+          <h3>{post.category}</h3>
+          <Container customClass="center">
+            <img
+              src={post.imagem}
+              alt={post.titulo}
+              className={styles.image_post}
+            />
+          </Container>
+          <h4>{post.resumo}</h4>
           <p>{post.texto}</p>
-        </>
+        </div>
       )}
     </Container>
   );
