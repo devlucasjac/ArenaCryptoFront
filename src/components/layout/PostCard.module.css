@@ -1,9 +1,13 @@
 .card_container {
-  margin-top: 0.7em;
+  margin: 0.7em;
   width: 250px;
   height: 200px;
 }
 
-.card_container hover {
-  cursor: pointer;
+.card_image {
+  transition: transform 0.5s;
+}
+
+.card_image:hover {
+  transform: scale(1.2);
 }

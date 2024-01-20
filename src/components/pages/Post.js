@@ -30,10 +30,10 @@ function Post() {
       {post && (
         <div>
           <h1>{post.titulo}</h1>
-          <h3>{post.category}</h3>
+          <h3>{post.category.nome}</h3>
           <Container customClass="center">
             <img
-              src={post.imagem}
+              src={`http://127.0.0.1:8000/${post.imagem}`}
               alt={post.titulo}
               className={styles.image_post}
             />

@@ -19,7 +19,13 @@ function PostCard({ titulo, resumo, imagem, id }) {
   return (
     <Card className={styles.card_container}>
       <CardActionArea onClick={sendToPage}>
-        <CardMedia component="img" height="100" src={imagem} alt={titulo} />
+        <CardMedia
+          className={styles.card_image}
+          component="img"
+          height="100"
+          src={`http://127.0.0.1:8000/${imagem}`}
+          alt={titulo}
+        />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {titulo}

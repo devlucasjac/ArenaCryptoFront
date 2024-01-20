@@ -1,6 +1,7 @@
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 import Home from "./components/pages/Home";
+import Category from "./components/pages/Category";
 import Post from "./components/pages/Post";
 
 import Container from "./components/layout/Container";
@@ -13,16 +14,10 @@ function App() {
       <NavBar></NavBar>
       <Container customClass="min-height">
         <Routes>
-          <Route
-            exact
-            path="/"
-            element={<Home url="http://127.0.0.1:8000/api/v1/post/" />}
-          />
+          <Route exact path="/" element={<Home />} />
           <Route path="/posts/:id" element={<Post />} />
-          <Route
-            path="/category/:id"
-            element={<Home url="http://127.0.0.1:8000/api/v1/post/" />}
-          />
+          <Route path="/category/:id" element={<Category />} />
+          <Route path="posts/:name" element={<Home />} />
         </Routes>
       </Container>
       <Footer></Footer>
