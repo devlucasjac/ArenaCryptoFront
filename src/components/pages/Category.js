@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import Container from "../layout/Container";
-import PostCard from "../layout/PostCard";
-import Loading from "../layout/Loading";
+import PostsDisplay from "../layout/PostsDisplay";
 
 function Category() {
   const { id } = useParams();
@@ -26,24 +24,7 @@ function Category() {
       .catch((err) => console.log(err));
   }, [id]);
 
-  return (
-    <Container customClass="center">
-      {posts ? (
-        <>
-          {posts.map((post) => (
-            <PostCard
-              id={post.id}
-              titulo={post.titulo}
-              resumo={post.resumo}
-              imagem={post.imagem}
-            ></PostCard>
-          ))}
-        </>
-      ) : (
-        <Loading />
-      )}
-    </Container>
-  );
+  return <PostsDisplay posts={posts} />;
 }
 
 export default Category;

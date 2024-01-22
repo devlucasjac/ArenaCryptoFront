@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 import { useState } from "react";
 
+import Container from "../Container/index";
+
 function MenuSelect({ categorys }) {
   const [showBox, setShowBox] = useState(false);
 
@@ -13,13 +15,17 @@ function MenuSelect({ categorys }) {
     <>
       <button onClick={change}>😉</button>
       {showBox && (
-        <div>
-          <Link to="/">Home</Link>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
           {categorys.map((category) => (
-            <Link to={`category/${category.id}`}>{category.nome}</Link>
+            <li>
+              <Link to={`category/${category.id}`}>{category.nome}</Link>
+            </li>
           ))}
           <button onClick={change}>Fecha!</button>
-        </div>
+        </ul>
       )}
     </>
   );
