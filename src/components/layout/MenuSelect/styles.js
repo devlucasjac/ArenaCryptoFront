@@ -1,0 +1,38 @@
+import styled from "styled-components";
+
+import { Link } from "react-router-dom";
+
+export const StyledUl = styled.ul`
+  list-style: none;
+  position: absolute;
+  z-index: 1;
+  padding: 3px;
+  transform: translate(-3px, 30px);
+  border: 1px solid #aaa;
+  border-radius: 5%;
+  background-color: #ddd;
+  box-shadow: 1px 1px 5px 0px rgba(126, 127, 145, 1);
+`;
+
+export const StyledDiv = styled.div`
+  min-width: 10px;
+  min-height: 5px;
+  padding: 4px 4px 0 4px;
+  border-radius: 5%;
+
+  &:hover {
+    background-color: #89d;
+  }
+`;
+
+export const StyledLi = styled.li`
+  &:hover {
+    background-color: #bbb;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  display: block;
+  color: #222;
+`;

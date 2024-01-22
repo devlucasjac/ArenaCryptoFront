@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
-
 import { useState } from "react";
 
-import Container from "../Container/index";
+import { StyledUl, StyledLi, StyledLink, StyledDiv } from "./styles.js";
+import { FaAlignJustify } from "react-icons/fa";
 
 function MenuSelect({ categorys }) {
   const [showBox, setShowBox] = useState(false);
@@ -13,19 +12,22 @@ function MenuSelect({ categorys }) {
 
   return (
     <>
-      <button onClick={change}>😉</button>
+      <StyledDiv onClick={change}>
+        <FaAlignJustify style={{ color: "white" }} />
+      </StyledDiv>
       {showBox && (
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
+        <StyledUl>
+          <StyledLi>
+            <StyledLink to="/">Home</StyledLink>
+          </StyledLi>
           {categorys.map((category) => (
-            <li>
-              <Link to={`category/${category.id}`}>{category.nome}</Link>
-            </li>
+            <StyledLi>
+              <StyledLink to={`category/${category.id}`}>
+                {category.nome}
+              </StyledLink>
+            </StyledLi>
           ))}
-          <button onClick={change}>Fecha!</button>
-        </ul>
+        </StyledUl>
       )}
     </>
   );
