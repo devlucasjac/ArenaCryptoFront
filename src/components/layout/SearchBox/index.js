@@ -2,6 +2,9 @@ import { useNavigate } from "react-router";
 
 import { useState } from "react";
 
+import { StyledForm, StyledInput, StyledButton } from "./styles";
+import { FaSearch } from "react-icons/fa";
+
 function SearchBox() {
   const navigate = useNavigate();
 
@@ -18,10 +21,12 @@ function SearchBox() {
   }
 
   return (
-    <form onSubmit={searchName}>
-      <input placeholder="digite" onChange={handleInput}></input>
-      <button>clica</button>
-    </form>
+    <StyledForm onSubmit={searchName}>
+      <StyledInput placeholder="Digite" onChange={handleInput}></StyledInput>
+      <StyledButton>
+        <FaSearch style={{ color: "white" }} />
+      </StyledButton>
+    </StyledForm>
   );
 }
 

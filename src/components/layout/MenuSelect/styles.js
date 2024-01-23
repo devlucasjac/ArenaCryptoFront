@@ -11,7 +11,7 @@ export const StyledUl = styled.ul`
   border: 1px solid #aaa;
   border-radius: 5%;
   background-color: #ddd;
-  box-shadow: 1px 1px 5px 0px rgba(126, 127, 145, 1);
+  box-shadow: 1px 1px 3px 0px #444;
 `;
 
 export const StyledDiv = styled.div`
