@@ -7,7 +7,7 @@ import NamePost from "./components/pages/NamePost";
 
 import Container from "./components/layout/Container";
 import NavBar from "./components/layout/NavBar/index.js";
-import Footer from "./components/layout/Footer";
+import Footer from "./components/layout/Footer/index.js";
 
 function App() {
   return (

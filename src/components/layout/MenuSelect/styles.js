@@ -7,7 +7,7 @@ export const StyledUl = styled.ul`
   position: absolute;
   z-index: 1;
   padding: 3px;
-  transform: translate(75px, 35px);
+  transform: translate(75px, 55px);
   border: 1px solid #aaa;
   border-radius: 5%;
   background-color: #ddd;

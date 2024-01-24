@@ -1,9 +1,7 @@
-import styles from "./PostCard.module.css";
-
 import { useNavigate } from "react-router";
 
 import * as React from "react";
-import Card from "@mui/material/Card";
+import { StyledCard } from "./styles";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
@@ -17,10 +15,9 @@ function PostCard({ titulo, resumo, imagem, id }) {
   }
 
   return (
-    <Card className={styles.card_container}>
+    <StyledCard>
       <CardActionArea onClick={sendToPage}>
         <CardMedia
-          className={styles.card_image}
           component="img"
           height="100"
           src={`http://127.0.0.1:8000/${imagem}`}
@@ -35,7 +32,7 @@ function PostCard({ titulo, resumo, imagem, id }) {
           </Typography>
         </CardContent>
       </CardActionArea>
-    </Card>
+    </StyledCard>
   );
 }
 

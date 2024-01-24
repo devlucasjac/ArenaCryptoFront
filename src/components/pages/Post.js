@@ -39,7 +39,7 @@ function Post() {
             />
           </Container>
           <h4>{post.resumo}</h4>
-          <p>{post.texto}</p>
+          <p style={{ margin: "10px" }}>{post.texto}</p>
         </div>
       )}
     </Container>
