@@ -2,6 +2,12 @@
   margin: 0.7em;
   width: 250px;
   height: 200px;
+  transition: transform 0.5s;
+}
+
+.card_container:hover {
+  transform: scale(1.2);
+  z-index: 1;
 }
 
 .card_image {

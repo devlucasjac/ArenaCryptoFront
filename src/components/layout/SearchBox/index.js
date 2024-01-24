@@ -12,7 +12,6 @@ function SearchBox() {
 
   function searchName(e) {
     e.preventDefault();
-    console.log(postName);
     navigate(`posts/name/${postName}`);
   }
 

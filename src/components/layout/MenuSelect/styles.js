@@ -7,7 +7,7 @@ export const StyledUl = styled.ul`
   position: absolute;
   z-index: 1;
   padding: 3px;
-  transform: translate(-3px, 30px);
+  transform: translate(75px, 35px);
   border: 1px solid #aaa;
   border-radius: 5%;
   background-color: #ddd;
@@ -16,8 +16,8 @@ export const StyledUl = styled.ul`
 
 export const StyledDiv = styled.div`
   min-width: 10px;
-  min-height: 5px;
-  padding: 4px 4px 0 4px;
+  height: 25px;
+  padding: 3px 3px 0 4px;
   border-radius: 5%;
 
   &:hover {

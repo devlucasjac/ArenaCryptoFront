@@ -11,6 +11,7 @@ export const StyledInput = styled.input`
   outline: none;
   padding: 6px;
   margin-right: 20px;
+  height: 30px;
 `;
 
 export const StyledButton = styled.button`
@@ -18,5 +19,6 @@ export const StyledButton = styled.button`
   border-radius: 50%;
   padding: 4px;
   min-width: 30px;
+  height: 30px;
   background-color: #469;
 `;
