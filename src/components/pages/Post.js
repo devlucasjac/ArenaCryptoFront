@@ -11,7 +11,7 @@ function Post() {
   const [post, setPost] = useState();
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/v1/post/${id}`, {
+    fetch(`https://crypto-arena-6ca9d8a65e1d.herokuapp.com/api/v1/post/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ function Post() {
           <h3>{post.category.nome}</h3>
           <Container customClass="center">
             <img
-              src={`http://127.0.0.1:8000/${post.imagem}`}
+              src={`https://crypto-arena-6ca9d8a65e1d.herokuapp.com${post.imagem}`}
               alt={post.titulo}
               className={styles.image_post}
             />

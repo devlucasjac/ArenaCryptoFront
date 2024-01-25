@@ -9,12 +9,15 @@ function Category() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/v1/categoria/${id}/posts/`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    fetch(
+      `https://crypto-arena-6ca9d8a65e1d.herokuapp.com/api/v1/categoria/${id}/posts/`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((resp) => resp.json())
       .then((data) => {
         setPosts(data);
