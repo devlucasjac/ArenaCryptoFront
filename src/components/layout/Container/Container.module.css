@@ -1,5 +1,5 @@
 .container {
-  width: 900px;
+  width: 70vw;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -7,7 +7,7 @@
 }
 
 .title {
-  width: 80vw;
+  width: 90vw;
   align-items: center;
 }
 

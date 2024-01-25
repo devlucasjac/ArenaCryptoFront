@@ -8,8 +8,8 @@ export const StyledNav = styled.nav`
 `;
 
 export const StyledImg = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   transition: transform 0.5s;
   &:hover {
     transform: scale(1.4);

@@ -6,13 +6,25 @@ function Footer() {
     <footer className={style.footer}>
       <ul className={style.social_list}>
         <li>
-          <FaFacebook />
+          <a
+            href="https://www.facebook.com/lucas.jacinto.71619/"
+            target="_blank"
+          >
+            <FaFacebook />
+          </a>
         </li>
         <li>
-          <FaInstagram />
+          <a href="https://www.instagram.com/lucasdesjacinto/" target="_blank">
+            <FaInstagram />
+          </a>
         </li>
         <li>
-          <FaLinkedin />
+          <a
+            href="https://www.linkedin.com/in/lucas-souza-jacinto/"
+            target="_blank"
+          >
+            <FaLinkedin />
+          </a>
         </li>
       </ul>
       <p className={style.copy_rigth}>
