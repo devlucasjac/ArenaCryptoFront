@@ -6,7 +6,7 @@ function Home() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/v1/post/", {
+    fetch("https://crypto-arena-6ca9d8a65e1d.herokuapp.com/api/v1/post/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

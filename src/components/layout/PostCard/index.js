@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router";
 
 import * as React from "react";
+import { useEffect } from "react";
+
 import { StyledCard } from "./styles";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -9,7 +11,9 @@ import { CardActionArea } from "@mui/material";
 
 function PostCard({ titulo, resumo, imagem, id }) {
   const navigate = useNavigate();
-
+  useEffect(() => {
+    console.log(imagem);
+  }, [titulo]);
   function sendToPage() {
     navigate(`/posts/${id}`);
   }
@@ -20,7 +24,7 @@ function PostCard({ titulo, resumo, imagem, id }) {
         <CardMedia
           component="img"
           height="100"
-          src={`http://127.0.0.1:8000/${imagem}`}
+          src={`https://crypto-arena-6ca9d8a65e1d.herokuapp.com${imagem}`}
           alt={titulo}
         />
         <CardContent>
